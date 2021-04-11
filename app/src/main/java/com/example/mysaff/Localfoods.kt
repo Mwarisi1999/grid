@@ -12,7 +12,7 @@ import android.widget.ListView
 import android.widget.TextView
 
 class Localfoods : AppCompatActivity() {
-//    var adapter : LocalAdapter ?= null
+  var adapter : LocalAdapter ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_localfoods)
@@ -51,8 +51,8 @@ class Localfoods : AppCompatActivity() {
 
 
         val c = LocalAdapter(this,f)
-        val m = findViewById<ListView>(R.id.urbanfoodlistview)
-        m!!.adapter = c
+        val m = findViewById<ListView>(R.id.localfoodlistview)
+        m.adapter = c
     }
 
 

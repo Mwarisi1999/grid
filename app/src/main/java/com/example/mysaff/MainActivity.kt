@@ -30,6 +30,28 @@ class MainActivity : AppCompatActivity() {
         val grid = findViewById<GridView>(R.id.gridview)
         grid.adapter = adapter
 
+        grid.setOnItemClickListener { parent, view, position, id ->
+            if(position==0){
+                startActivity(Intent(this,Urbanfoodmain::class.java))
+            }
+            if(position==1){
+                startActivity(Intent(this,Localfoods::class.java))
+            }
+            if(position==2){
+                startActivity(Intent(this,RoastedFoods::class.java))
+            }
+            if(position==3){
+                startActivity(Intent(this,Takeaway::class.java))
+            }
+            if(position==4){
+                startActivity(Intent(this,Drinks::class.java))
+            }
+            if(position==5){
+                startActivity(Intent(this,QuickFoods::class.java))
+            }
+
+        }
+
     }
 
     class FoodAdapter: BaseAdapter{
@@ -53,13 +75,13 @@ class MainActivity : AppCompatActivity() {
             photo.setImageResource(food.image!!)
             text1.text = food.name
 
-            photo.setOnClickListener{
-                var intent = Intent(context, FoodDetailsActivity::class.java)
-                intent.putExtra("name",food.name)
-                intent.putExtra("des",food.des)
-                intent.putExtra("image",food.image!!)
-                context!!.startActivity(intent)
-            }
+//            photo.setOnClickListener{
+//                var intent = Intent(context, FoodDetailsActivity::class.java)
+//                intent.putExtra("name",food.name)
+//                intent.putExtra("des",food.des)
+//                intent.putExtra("image",food.image!!)
+//                context!!.startActivity(intent)
+//            }
             return foodview
 
         }

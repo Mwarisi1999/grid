@@ -9,7 +9,11 @@
         android:roundIcon="@drawable/res"
         android:supportsRtl="true"
         android:theme="@style/Theme.MySaff">
-        <activity android:name=".Localfoods"></activity>
+        <activity android:name=".QuickFoods"></activity>
+        <activity android:name=".Drinks" />
+        <activity android:name=".Takeaway" />
+        <activity android:name=".RoastedFoods" />
+        <activity android:name=".Localfoods" />
         <activity android:name=".Urbanfoodmain" />
         <activity android:name=".splash">
             <intent-filter>
